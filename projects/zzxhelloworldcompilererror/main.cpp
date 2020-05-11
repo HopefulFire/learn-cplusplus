@@ -1,9 +1,13 @@
 #include <iostream>
 
+extern int x;
+
 int main() {
 
-	int favorite_number;
-
 	std::cout << "Hello, world\n";
+
+	std::cout << x
+
+
 	return 0;
 }
