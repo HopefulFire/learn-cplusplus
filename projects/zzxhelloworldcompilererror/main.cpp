@@ -1,12 +1,10 @@
 #include <iostream>
 
-extern int x;
-
 int main() {
 
 	std::cout << "Hello, world\n";
 
-	std::cout << x
+	1/0;
 
 
 	return 0;
