@@ -4,9 +4,15 @@
 
 int main() {
 
-	int age {21};
+	std::cout << "Enter the width of the room: ";
+	int room_width {0};
+	std::cin >> room_width;
 
-	std::cout << age << "\n";
+	std::cout << "Enter the length of the room: ";
+	int room_length {0};
+	std::cin >> room_length;
 
+	std::cout << "The area of the room is " << room_width * room_length << "\n";
 
+	return 0;
 }
