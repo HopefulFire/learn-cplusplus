@@ -1,5 +1,12 @@
 #include <iostream>
 
+//this is a comment
+
+/*
+	This is a multiline
+	comment!!! 
+*/
+
 int main()
 {
 	int number;
