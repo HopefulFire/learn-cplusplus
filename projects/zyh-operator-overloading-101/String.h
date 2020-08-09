@@ -10,7 +10,12 @@ public:
 	~String(); // destructor
 	String &operator=(const String &rhs); // copy assignment
 	String &operator=(String &&rhs); // move assignment
-	// getters
+
+	String operator-() const; // make lowercase (unary -)
+	String operator+(const String &rhs) const; // concatenate (binary +)
+	bool operator==(const String &rhs) const; // compare (binary ==)
+	
+	// getters and display 
 	void display() const;
 	int get_length() const;
 	const char *get_str() const;
