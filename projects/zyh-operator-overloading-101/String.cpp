@@ -2,6 +2,30 @@
 #include <iostream>
 #include "String.h"
 
+bool operator==(const String &lhs, const String &rhs) {
+	return std::strcmp(lhs.str, rhs.str) == 0;
+}
+
+String operator-(const String &obj) {
+	char *buff = new char[std::strlen(obj.str) + 1];
+	std::strcpy(buff, obj.str);
+	for (size_t i{0}; i<std::strlen(buff); i++) {
+		buff[i] = std::tolower(buff[i]);
+	}
+	String temp{buff};
+	delete [] buff;
+	return temp;
+}
+
+String operator+(const String &lhs, const String &rhs) {
+	char *buff = new char[std::strlen(lhs.str) + std::strlen(rhs.str) + 1];
+	std::strcpy(buff, lhs.str);
+	std::strcat(buff, rhs.str);
+	String temp{buff};
+	delete [] buff;
+	return temp;
+}
+
 String::String()
 :	str(nullptr) {
 	str = new char[1];
@@ -51,7 +75,7 @@ String &String::operator=(String &&rhs) {
 	}
 	return *this;
 }
-
+/*
 String String::operator-() const {
 	char *buff = new char[std::strlen(str) + 1];
 	std::strcpy(buff, str);
@@ -75,7 +99,7 @@ String String::operator+(const String &rhs) const {
 bool String::operator==(const String &rhs) const {
 	return std::strcmp(str, rhs.str) == 0;
 }
-
+*/
 void String::display() const {
 	std::cout << str << " : " << get_length() << std::endl;
 }

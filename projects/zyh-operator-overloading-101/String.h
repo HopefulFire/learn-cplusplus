@@ -1,5 +1,8 @@
 #pragma once
 class String {
+	friend bool operator==(const String &lhs, const String &rhs);
+	friend String operator-(const String &obj);
+	friend String operator+(const String &lhs, const String &rhs);
 private:
 	char *str;
 public:
@@ -10,11 +13,11 @@ public:
 	~String(); // destructor
 	String &operator=(const String &rhs); // copy assignment
 	String &operator=(String &&rhs); // move assignment
-
+/*
 	String operator-() const; // make lowercase (unary -)
 	String operator+(const String &rhs) const; // concatenate (binary +)
 	bool operator==(const String &rhs) const; // compare (binary ==)
-	
+*/	
 	// getters and display 
 	void display() const;
 	int get_length() const;
