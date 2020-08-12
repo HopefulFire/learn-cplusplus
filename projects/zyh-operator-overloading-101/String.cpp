@@ -75,31 +75,7 @@ String &String::operator=(String &&rhs) {
 	}
 	return *this;
 }
-/*
-String String::operator-() const {
-	char *buff = new char[std::strlen(str) + 1];
-	std::strcpy(buff, str);
-	for (size_t i{0}; i<std::strlen(buff); i++) {
-		buff[i] = std::tolower(buff[i]);
-	}
-	String temp{buff};
-	delete [] buff;
-	return temp;
-}
 
-String String::operator+(const String &rhs) const {
-	char *buff = new char[strlen(str) + strlen(rhs.str) + 1];
-	std::strcpy(buff, str);
-	std::strcat(buff, rhs.str);
-	String temp{buff};
-	delete [] buff;
-	return temp;
-}
-
-bool String::operator==(const String &rhs) const {
-	return std::strcmp(str, rhs.str) == 0;
-}
-*/
 void String::display() const {
 	std::cout << str << " : " << get_length() << std::endl;
 }
