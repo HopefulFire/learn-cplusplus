@@ -1,8 +1,13 @@
 #pragma once
+#include <iostream>
+#include <cstring>
+
 class String {
 	friend bool operator==(const String &lhs, const String &rhs);
 	friend String operator-(const String &obj);
 	friend String operator+(const String &lhs, const String &rhs);
+	friend std::ostream &operator<<(std::ostream &os, const String &rhs);
+	friend std::istream &operator>>(std::istream &is, String &rhs);
 private:
 	char *str;
 public:

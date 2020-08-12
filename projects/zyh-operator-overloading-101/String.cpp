@@ -1,5 +1,3 @@
-#include <cstring>
-#include <iostream>
 #include "String.h"
 
 bool operator==(const String &lhs, const String &rhs) {
@@ -24,6 +22,18 @@ String operator+(const String &lhs, const String &rhs) {
 	String temp{buff};
 	delete [] buff;
 	return temp;
+}
+
+std::ostream &operator<<(std::ostream &os, const String &rhs) {
+	os << rhs.str;
+	return os;
+}
+
+std::istream &operator>>(std::istream &is, String &rhs) {
+	char *buff{new char[1000]};
+	is >> buff;
+	rhs = String{buff};
+	return is;
 }
 
 String::String()

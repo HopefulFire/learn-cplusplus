@@ -4,25 +4,11 @@
 int main() {
 	String larry{"Larry"};
 	String moe{"Moe"};
+	String curly;
+	std::cout << "Enter the third stooge's first name: ";
+	std::cin >> curly;
 
-	String stooge{larry};
-	larry.display();
-	moe.display();
-
-	std::cout << (larry == moe) << std::endl;
-	std::cout << (larry == stooge) << std::endl;
-
-	larry.display();
-	String larry2{-larry};
-	larry2.display();
-
-	String stooges{larry + "Moe"};
-
-	String two_stooges{moe + " " + "Larry"};
-	two_stooges.display();
-
-	String three_stooges{moe + " " + larry + " " + "Curly"};
-	three_stooges.display();
+	std::cout << "The three stooges are " << larry << ", " << moe << ", and " << curly << std::endl;
 
 	return 0;
 }
