@@ -4,6 +4,7 @@
 
 int main() {
 	String empty;
+	String empty2{nullptr};
 	std::cout << empty << std::endl;
 	String hello{"Hello there!"};
 	std::cout << hello << std::endl;
